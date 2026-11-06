@@ -1,0 +1,203 @@
+/* =========================================================
+   Velvet Menagerie — Lioden den CSS
+   by Forgedplotline · dark brown / gold / festive red & green
+   Works on phone, tablet and desktop (Lioden's own layout
+   already resizes; the bottom section tunes it for small screens).
+   ========================================================= */
+
+:root {
+  --vm-bg:     #1c1716;
+  --vm-panel:  #2a1b19;
+  --vm-card:   #241816;
+  --vm-edge:   #4a2c26;
+  --vm-gold:   #c9a25e;
+  --vm-cream:  #f1e4d0;
+  --vm-text:   #d8c8b2;
+  --vm-red:    #8a1c26;
+  --vm-green:  #2f5a45;
+  scrollbar-color: var(--vm-gold) var(--vm-panel);
+  scrollbar-width: thin;
+}
+
+/* ---------- Page ---------- */
+body {
+  background: var(--vm-bg) !important;
+  color: var(--vm-text);
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+div.container.main,
+.main {
+  background: var(--vm-bg) !important;
+  border: 1px solid var(--vm-edge);
+  box-shadow: 0 6px 24px rgba(0,0,0,.5);
+}
+
+.col-md-9, .col-md-3 { background: none !important; }
+
+/* ---------- Top bar & menu ---------- */
+.topbar, .navbar {
+  background: var(--vm-panel) !important;
+  border-color: var(--vm-edge) !important;
+  color: var(--vm-text);
+}
+.topbar a:link, .topbar a:visited,
+.navbar li a { color: var(--vm-gold) !important; }
+.topbar a:hover, .navbar li a:hover { color: var(--vm-cream) !important; }
+
+/* ---------- Breadcrumb & title ---------- */
+.breadcrumb {
+  background: var(--vm-panel) !important;
+  border: 1px solid var(--vm-edge);
+  border-radius: 0;
+}
+.breadcrumb a { color: var(--vm-gold) !important; }
+.breadcrumb > .active { color: var(--vm-text) !important; }
+
+h1, h3 {
+  color: var(--vm-cream) !important;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+h1 { text-shadow: 0 2px 8px rgba(0,0,0,.6); }
+h1 small { color: var(--vm-gold) !important; }
+
+/* ---------- Links ---------- */
+a:link, a:visited { color: var(--vm-gold); }
+a:hover, a:focus, a:active { color: var(--vm-cream); text-decoration: none; }
+
+/* ---------- Tables (den info, player box, comments) ---------- */
+.table {
+  background: var(--vm-card) !important;
+  border: 3px double var(--vm-edge) !important;
+  border-radius: 0 !important;
+  color: var(--vm-text);
+}
+.table .top, .table th {
+  background: var(--vm-red) !important;
+  color: var(--vm-cream) !important;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+  border: none !important;
+}
+.table .top a:link, .table .top a:visited,
+.table th a:link, .table th a:visited { color: var(--vm-cream) !important; }
+.table .top a:hover, .table th a:hover { color: var(--vm-gold) !important; }
+
+.table .bottom {
+  background: var(--vm-green) !important;
+  color: var(--vm-cream) !important;
+  border: none !important;
+}
+.table .bottom a:link, .table .bottom a:visited { color: var(--vm-cream) !important; }
+.table .bottom a:hover { color: var(--vm-gold) !important; }
+
+.table .left, .table .right, .table .right_odd,
+.table td {
+  background: var(--vm-card) !important;
+  color: var(--vm-text);
+  border-color: var(--vm-edge) !important;
+}
+
+/* stat boxes (Level, Stats, Cubs, Beetle Slots…) */
+.inner-table { border-collapse: separate; border-spacing: 4px; }
+.inner-table .left {
+  background: var(--vm-panel) !important;
+  color: var(--vm-gold) !important;
+  font-variant: small-caps;
+  letter-spacing: 1px;
+  border: 1px solid var(--vm-edge) !important;
+  border-radius: 0 !important;
+}
+.inner-table .right {
+  background: var(--vm-bg) !important;
+  color: var(--vm-cream) !important;
+  border: 1px solid var(--vm-edge) !important;
+  border-radius: 0 !important;
+}
+
+/* player box */
+.table#player hr { border-top-color: var(--vm-edge); }
+table#player img.floatleft,
+.table img { border: 1px solid var(--vm-gold); }
+
+/* ---------- Comment box & forms ---------- */
+textarea, select,
+input[type="text"], input[type="password"], input[type="number"],
+.form-control, .select-control {
+  background: var(--vm-card) !important;
+  color: var(--vm-cream) !important;
+  border: 1px solid var(--vm-edge) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+textarea:focus, input:focus, .form-control:focus {
+  border-color: var(--vm-gold) !important;
+  outline: none;
+}
+
+input[type="submit"], input[type="button"], input[type="reset"],
+button, button.button, .btn {
+  background: var(--vm-red) !important;
+  color: var(--vm-cream) !important;
+  border: 1px solid var(--vm-gold) !important;
+  border-radius: 0 !important;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: 1px;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+input[type="submit"]:hover, input[type="button"]:hover,
+button:hover, .btn:hover {
+  background: var(--vm-green) !important;
+  color: var(--vm-cream) !important;
+}
+
+/* ---------- Panels, sidebar, badges, alerts ---------- */
+.panel, .col-md-3 .panel, .sidebar {
+  background: var(--vm-card) !important;
+  border: 1px solid var(--vm-edge) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: var(--vm-text);
+}
+.sidebar h3 { color: var(--vm-gold) !important; }
+.badge { background: var(--vm-red) !important; color: var(--vm-cream) !important; }
+.progress { background: var(--vm-panel) !important; border-radius: 0; }
+.progress-bar { background: var(--vm-gold) !important; }
+
+hr { border-top-color: var(--vm-edge); }
+
+/* ---------- Scrollbar (Chrome/Safari/Edge) ---------- */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--vm-panel); }
+::-webkit-scrollbar-thumb { background: var(--vm-gold); }
+::-webkit-scrollbar-thumb:hover { background: var(--vm-cream); }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 991px) {
+  div.container.main, .main { width: auto; margin: 0 8px; }
+  h1 { font-size: 30px; }
+}
+
+/* ---------- Phone ---------- */
+@media (max-width: 767px) {
+  div.container.main, .main {
+    margin: 0;
+    border-left: none;
+    border-right: none;
+    box-shadow: none;
+  }
+  h1 { font-size: 24px; letter-spacing: 1px; }
+  .table { border-width: 2px !important; }
+  .table td, .inner-table .left, .inner-table .right {
+    padding: 6px !important;
+    font-size: 13px;
+  }
+  .table img, table#player img.floatleft {
+    max-width: 100%;
+    height: auto;
+  }
+  input[type="text"], textarea { font-size: 16px; } /* stops iPhone zooming in */
+}
